@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -9,6 +10,7 @@ class Category extends Model
 {
 	protected $fillable = [
 		'name',
+		'slug',
 		'order'
 	];
 
@@ -24,6 +26,6 @@ class Category extends Model
 
     public function children()
     {
-    	return $this->hasMany(App\Category::class, 'parent_id', 'id');
+    	return $this->hasMany(Category::class, 'parent_id', 'id');
     }
 }

@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Category;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Category::class, function (Faker $faker) {
     return [
-        'name' => $faker->unique()->name
+        'name' => $name = $faker->unique()->name,
+        'slug' => str_slug($name)
     ];
 });
