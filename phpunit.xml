@@ -28,6 +28,7 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="MAIL_DRIVER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="DB_DATABASE" value="cart-testing"/>
         <env name="SESSION_DRIVER" value="array"/>
     </php>
 </phpunit>
