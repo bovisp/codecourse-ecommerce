@@ -40,7 +40,7 @@ class RegistrationTest extends TestCase
     public function test_it_requires_a_password()
     {
         $this->json('POST', 'api/auth/register')
-        	->assertJsonValidationErrors(['email']);
+        	->assertJsonValidationErrors(['password']);
     }
 
     public function test_it_registers_a_user()
