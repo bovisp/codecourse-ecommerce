@@ -2,6 +2,8 @@
 
 Route::resource('categories', 'Categories\CategoriesController');
 
+Route::resource('products', 'Products\ProductsController');
+
 Route::group([ 'prefix' => 'auth'], function () {
 	Route::post('register', 'Auth\\RegisterController@store');
 
