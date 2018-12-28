@@ -20,7 +20,9 @@ class CategoryTest extends TestCase
 
     public function test_it_can_fetch_only_parents()
     {
-    	$category = factory(Category::class)->create();
+    	$category = factory(Category::class)->create([
+            'parent_id' => null
+        ]);
 
     	$category->children()->save(
     		factory(Category::class)->create()

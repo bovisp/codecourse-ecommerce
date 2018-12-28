@@ -60,8 +60,8 @@ class RegistrationTest extends TestCase
     public function test_it_returns_a_user_on_registration()
     {
         $this->json('POST', 'api/auth/register', [
-        	'name' => 'Paul Bovis',
-        	'email' => $email = 'bovisp@me.com',
+        	'name' => 'Vida Bovis',
+        	'email' => $email = 'bovisv@me.com',
         	'password' => 'secret'
         ])
 	    	->assertJsonFragment([
