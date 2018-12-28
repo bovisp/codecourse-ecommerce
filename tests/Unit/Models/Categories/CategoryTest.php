@@ -53,6 +53,6 @@ class CategoryTest extends TestCase
             factory(Product::class)->create()
         );
 
-        $this->assertInstanceOf(Product::class, $category->products()->first());
+        $this->assertInstanceOf(Product::class, $category->products->first());
     }
 }
