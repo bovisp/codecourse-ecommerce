@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use App\Models\Category;
+use App\Models\Traits\HasPrice;
 use App\Models\ProductVariation;
 use App\Models\Traits\CanBeScoped;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use CanBeScoped;
+    use CanBeScoped, HasPrice;
 
     public function getRouteKeyName()
     {
