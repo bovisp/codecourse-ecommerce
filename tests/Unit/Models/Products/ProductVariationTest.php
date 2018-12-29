@@ -3,6 +3,7 @@
 namespace Tests\Unit\Models\Products;
 
 use Tests\TestCase;
+use App\Models\Product;
 use App\Models\ProductVariation;
 use App\Models\ProductVariationType;
 
