@@ -20,6 +20,13 @@ class Cart
     	);
 	}
 
+	public function update($productId, $quantity)
+	{
+		$this->user->cart()->updateExistingPivot($productId, [
+			'quantity' => $quantity
+		]);
+	}
+
 	protected function getStorePayload($products)
 	{
 		return collect($products)
