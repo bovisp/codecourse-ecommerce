@@ -25,4 +25,9 @@ class CartController extends Controller
     {
     	$cart->update($productVariation->id, $request->quantity);
     }
+
+    public function destroy(ProductVariation $productVariation, Cart $cart)
+    {
+        $cart->delete($productVariation->id);
+    }
 }
