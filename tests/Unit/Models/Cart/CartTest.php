@@ -93,4 +93,19 @@ class CartTest extends TestCase
 
         $this->assertCount(0, $user->fresh()->cart);
     }
+
+    public function test_it_can_check_if_the_cart_is_empty_of_quantites()
+    {
+        $cart = new Cart(
+            $user = factory(User::class)->create()
+        );
+
+        $user->cart()->attach(
+            $productVariation = factory(ProductVariation::class)->create(), [
+                'quantity' => 0
+            ]
+        );
+
+        $this->assertTrue($cart->isEmpty());
+    }
 }
