@@ -47,7 +47,9 @@ class CartController extends Controller
     protected function meta(Cart $cart)
     {
         return [
-            'empty' => $cart->isEmpty()
+            'empty' => $cart->isEmpty(),
+            'subtotal' => $cart->subtotal()->formatted(),
+            'total' => $cart->total()->formatted(),
         ];
     }
 }
