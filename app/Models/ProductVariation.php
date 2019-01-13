@@ -62,4 +62,9 @@ class ProductVariation extends Model
                 'in_stock'
             ]);   
     }
+
+    public function minStock($count)
+    {
+        return min($this->stockCount(), $count);
+    }
 }
