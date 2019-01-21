@@ -261,7 +261,7 @@ class CountriesTableSeeder extends Seeder
 			'ZW' => 'Zimbabwe',
 		);
 
-		collect($countries)->each(function ($code, $name) {
+		collect($countries)->each(function ($name, $code) {
 			Country::create([
 				'code' => $code,
 				'name' => $name
